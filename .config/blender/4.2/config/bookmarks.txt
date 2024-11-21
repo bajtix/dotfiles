@@ -1,0 +1,14 @@
+[Bookmarks]
+/home/bajtix/Projects/
+/home/bajtix/Projects/3d Fighter/
+[Recent]
+/home/bajtix/Documents/
+/home/bajtix/Downloads/
+/run/media/bajtix/MOVIES/Lundi/CGI/note-highlights-hdhd/
+/run/media/bajtix/MOVIES/Lundi/CGI/
+/run/media/bajtix/MOVIES/Lundi/CGI/end-credits-2/
+/run/media/bajtix/MOVIES/Lundi/CGI/Temu - nuty/
+/run/media/bajtix/MOVIES/Lundi/CGI/end-credits-1/
+/home/bajtix/Pictures/Screenshots/
+/usr/share/fonts/
+/run/media/bajtix/MOVIES/Lundi/Klipy C1/
