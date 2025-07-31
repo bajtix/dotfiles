@@ -18,3 +18,7 @@ vim.cmd('noremap <C-b> :NvimTreeFocus<CR>')
 vim.cmd('colorscheme unokai')
 
 vim.lsp.set_log_level('debug')
+
+require('deferred-clipboard').setup {
+  fallback = 'unnamedplus', -- or your preferred setting for clipboard
+}

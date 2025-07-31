@@ -18,5 +18,6 @@ return require('packer').startup(function(use)
 	use 'prabirshrestha/vim-lsp'
 	use 'mattn/vim-lsp-settings'
 	use 'neovim/nvim-lspconfig'
+	use 'EtiamNullam/deferred-clipboard.nvim'
 end)
 
