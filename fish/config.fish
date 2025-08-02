@@ -1,5 +1,18 @@
 if status is-interactive
     fastfetch -c examples/8
+
+    set -l DIRECTORY "$PWD"
+    cd ~/.config
+    set -l MODS (git status -uno --porcelain | wc -l)
+    set_color -b red 
+    if [ $MODS -eq 1 ]
+    	echo "1 unstaged config modification!"
+    else if [ $MODS -gt 1 ]
+	echo "$MODS unstaged config modifications!"
+    end
+    set_color normal
+
+    cd "$DIRECTORY"
 end
 
 alias note=/usr/bin/vim
