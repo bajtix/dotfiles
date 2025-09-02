@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/bajtix/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["cord.nvim"] = {
+    loaded = true,
+    path = "/home/bajtix/.local/share/nvim/site/pack/packer/start/cord.nvim",
+    url = "https://github.com/vyfor/cord.nvim"
+  },
   ["deferred-clipboard.nvim"] = {
     loaded = true,
     path = "/home/bajtix/.local/share/nvim/site/pack/packer/start/deferred-clipboard.nvim",
@@ -163,11 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bajtix/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["presence.nvim"] = {
-    loaded = true,
-    path = "/home/bajtix/.local/share/nvim/site/pack/packer/start/presence.nvim",
-    url = "https://github.com/andweeb/presence.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

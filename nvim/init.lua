@@ -13,16 +13,16 @@ vim.keymap.set('n', '<Down>', '<Nop>', { noremap = true })
 vim.keymap.set('n', '<Left>', '<Nop>', { noremap = true })
 vim.keymap.set('n', '<Right>', '<Nop>', { noremap = true })
 vim.keymap.set('i', 'jj', '<Esc>', { noremap = true })
+
 vim.keymap.set('t', 'jj', '<C-\\><C-n>', { noremap = true })
 vim.keymap.set('t', 'mm', 'make<CR>', { noremap = true })
-vim.keymap.set('t', 'kk', '<C-c><C-\\>:q<CR>', { noremap = true })
-
+vim.keymap.set('t', 'kk', '<C-c><C-\\><C-n>:q<CR>', { noremap = true })
 
 vim.keymap.set('n', '<C-k>k', ':LspHover<CR>', {noremap = true})
 vim.keymap.set('n', '<C-k>j', ':LspPeekDefinition<CR>', {noremap = true})
 vim.keymap.set('n', '<C-k>l', ':LspPeekTypeDefinition<CR>', {noremap = true})
 -- build macro
-vim.keymap.set('n', '<F5>', ':vsplit<CR><C-w>l:term<CR>i make<CR><C-\\><C-n>', { noremap = true })
+vim.keymap.set('n', '<F5>', ':split<CR><C-w>j:term<CR>i make<CR>', { noremap = true })
 
 vim.cmd('colorscheme unokai')
 --vim.cmd('highlight Normal guibg=#000000')
@@ -134,14 +134,11 @@ require('nvim-treesitter.configs').setup {
 	},
 }
 
-require("presence").setup({
-    auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
-    neovim_image_text   = "neovim my beloved", -- Text displayed when hovered over the Neovim image
-    main_image          = "file",                   -- Main image display (either "neovim" or "file")
-    enable_line_number  = true,                      -- Displays the current line number instead of the current project
-    buttons             = true,                       -- Configure Rich Presence button(s), either a boolean to enable/disable, a static table (`{{ label = "<label>", url = "<url>" }, ...}`, or a function(buffer: string, repo_url: string|nil): table)
-    show_time           = true,                       -- Show the timer
-})
+require('cord').setup {
+	display = {
+		view = 'asset',
+	}
+}
 
 require("mason").setup()
 require("mason-lspconfig").setup()

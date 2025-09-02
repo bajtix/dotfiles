@@ -36,7 +36,10 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.8',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
-	use 'andweeb/presence.nvim'
+	use {
+		'vyfor/cord.nvim',
+		run = ':Cord update',
+	}
 	use 'mason-org/mason.nvim'
 
 	use 'ollykel/v-vim'
