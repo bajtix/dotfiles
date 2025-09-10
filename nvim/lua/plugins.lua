@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
 	use 'mason-org/mason.nvim'
 
 	use 'ollykel/v-vim'
+	use '~/.config/nvim/c3-vim'
 	use 'numToStr/Comment.nvim'
 end)
 

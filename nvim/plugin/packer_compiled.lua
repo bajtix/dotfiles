@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/bajtix/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["c3-vim"] = {
+    loaded = true,
+    path = "/home/bajtix/.local/share/nvim/site/pack/packer/start/c3-vim",
+    url = "/home/bajtix/.config/nvim/c3-vim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/bajtix/.local/share/nvim/site/pack/packer/start/cmp-buffer",
