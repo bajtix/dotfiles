@@ -42,7 +42,9 @@ return require('packer').startup(function(use)
 	}
 	use 'mason-org/mason.nvim'
 
-	use 'ollykel/v-vim'
 	use 'numToStr/Comment.nvim'
+
+	-- languages 
+	use 'ollykel/v-vim'
 end)
 

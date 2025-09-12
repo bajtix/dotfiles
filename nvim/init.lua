@@ -50,7 +50,7 @@ vim.keymap.set('n', '<C-p>', telescope_b.find_files, { desc = 'Telescope find fi
 -- vim.lsp.set_log_level('debug')
 
 require('deferred-clipboard').setup {
-  fallback = 'unnamedplus', -- or your preferred setting for clipboard
+	fallback = 'unnamedplus', -- or your preferred setting for clipboard
 }
 
 -- Set up nvim-cmp.
@@ -117,6 +117,7 @@ cmp.setup.cmdline(':', {
 
 -- Set up lspconfig completions
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require('lspconfig')['clangd'].setup {
 	capabilities = capabilities,
 	cmd = {"clangd", "--background-index", "--function-arg-placeholders=false"}
@@ -125,7 +126,8 @@ require('lspconfig')['clangd'].setup {
 require('lspconfig')['v-analyzer'].setup {
 	capabilities = capabilities
 }
--- ------------------
+
+------------------
 
 require('nvim-treesitter.configs').setup {
 	ensure_installed = { "c", "lua", "vim","markdown_inline" },
