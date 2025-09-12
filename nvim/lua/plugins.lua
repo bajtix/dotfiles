@@ -41,10 +41,10 @@ return require('packer').startup(function(use)
 		run = ':Cord update',
 	}
 	use 'mason-org/mason.nvim'
-
 	use 'numToStr/Comment.nvim'
 
 	-- languages 
 	use 'ollykel/v-vim'
+	use '~/.config/nvim/c3-vim'
 end)
 
