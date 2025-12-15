@@ -20,7 +20,6 @@ alias vim=/usr/bin/nvim
 
 set fish_greeting "$(shuf ~/.config/fish/welcomes.txt -n1) | $(date)"
 
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 # .. but were modified so that the startup does not take ages.
