@@ -18,6 +18,7 @@ end
 alias note=/usr/bin/vim
 alias vim=/usr/bin/nvim
 
+set -x EDITOR nvim
 set fish_greeting "$(shuf ~/.config/fish/welcomes.txt -n1) | $(date)"
 
 # >>> conda initialize >>>

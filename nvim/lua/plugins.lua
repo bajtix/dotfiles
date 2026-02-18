@@ -46,5 +46,6 @@ return require('packer').startup(function(use)
 	-- languages 
 	use 'ollykel/v-vim'
 	use '~/.config/nvim/c3-vim'
+	use 'tpope/vim-dadbod'
 end)
 
