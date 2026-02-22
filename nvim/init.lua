@@ -21,6 +21,7 @@ vim.keymap.set('t', 'kk', '<C-c><C-\\><C-n>:q<CR>', { noremap = true })
 vim.keymap.set('n', '<C-k>k', ':LspHover<CR>', {noremap = true})
 vim.keymap.set('n', '<C-k>j', ':LspPeekDefinition<CR>', {noremap = true})
 vim.keymap.set('n', '<C-k>l', ':LspPeekTypeDefinition<CR>', {noremap = true})
+vim.keymap.set('n', '<C-k>;', ':LspCodeAction<CR>', {noremap = true})
 -- build macro
 vim.keymap.set('n', '<F5>', ':split<CR><C-w>j:term<CR>i make<CR>', { noremap = true })
 
@@ -123,9 +124,6 @@ require('lspconfig')['clangd'].setup {
 	cmd = {"clangd", "--background-index", "--function-arg-placeholders=false"}
 }
 
-require('lspconfig')['v-analyzer'].setup {
-	capabilities = capabilities
-}
 
 ------------------
 
