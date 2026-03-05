@@ -34,6 +34,13 @@ vim.keymap.set('n', '<F6>', ':LazyGit<CR>', { noremap = true })
 
 
 require('fzf-lua').register_ui_select()
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function()
+    -- post save hook
+    require("lint").try_lint()
+  end,
+})
+
 vim.diagnostic.config({ virtual_text = true })
 
 require("focus")
