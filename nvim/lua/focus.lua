@@ -6,7 +6,10 @@ function please_focus()
     return
   end
   if desktop_session == "plasma" then
-    os.execute("kdotool search -C --title nvim windowactivate")
+    vim.fn.system("kdotool search -C --title nvim windowactivate")
+  end
+  if desktop_session == "hyprland" then
+    vim.fn.system("hyprctl dispatch focuswindow \"title:.*vim.*\"")
   end
 end
 

@@ -1,8 +1,8 @@
 -- Function to find Godot project root directory
 local function find_godot_project_root()
-    local cwd = vim.fn.getcwd()
+    local cwd = vim.fn.expand("%:p:h")
     local search_paths = { '', '/..' }
-    
+
     for _, relative_path in ipairs(search_paths) do
         local project_file = cwd .. relative_path .. '/project.godot'
         if vim.uv.fs_stat(project_file) then
