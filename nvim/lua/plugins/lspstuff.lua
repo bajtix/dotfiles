@@ -26,4 +26,20 @@ return {{
     "mason-org/mason.nvim",
     "stevearc/conform.nvim"
   }
+},{
+  "mfussenegger/nvim-lint",
+  config = function()
+    require('lint').linters_by_ft = {
+      gdscript = { "gdlint" }
+    }
+  end
+},{
+  "rshkarin/mason-nvim-lint",
+  opts = {
+    automatic_installation = false
+  },
+  dependencies = {
+    "mason-org/mason.nvim",
+    "mfussenegger/nvim-lint"
+  }
 }}

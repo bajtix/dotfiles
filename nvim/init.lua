@@ -9,12 +9,11 @@ vim.o.pumheight = 10
 vim.o.termguicolors = true
 
 
-vim.keymap.set('n', '<Up>', '<Nop>',    { noremap = true })
-vim.keymap.set('n', '<Down>', '<Nop>',  { noremap = true })
-vim.keymap.set('n', '<Left>', '<Nop>',  { noremap = true })
-vim.keymap.set('n', '<Right>', '<Nop>', { noremap = true })
-vim.keymap.set('i', '<C-j>', '<Esc>',   { noremap = true })
--- vim.keymap.set('i', '<C-k>', '<Esc>:q<CR>', { noremap = true })
+vim.keymap.set('n', '<Up>', '<Nop>',         { noremap = true })
+vim.keymap.set('n', '<Down>', '<Nop>',       { noremap = true })
+vim.keymap.set('n', '<Left>', '<Nop>',       { noremap = true })
+vim.keymap.set('n', '<Right>', '<Nop>',      { noremap = true })
+vim.keymap.set('i', '<C-j>', '<Esc>',        { noremap = true })
 
 vim.keymap.set('n', '<C-k>k', vim.lsp.buf.hover,         { noremap = true })
 vim.keymap.set('n', '<C-k>j', vim.lsp.buf.definition,    { noremap = true })
@@ -23,7 +22,7 @@ vim.keymap.set('n', '<C-k>h', vim.lsp.buf.code_action,   { noremap = true })
 vim.keymap.set('n', '<C-k>f', require('conform').format, { noremap = true })
 
 vim.keymap.set('t', '<C-j>', '<C-\\><C-n>', { noremap = true })
-vim.keymap.set('t', '<C-k>', '<C-c><C-\\><C-n>:q<CR>', { noremap = true })
+-- vim.keymap.set('t', '<C-j>q', '<C-c><C-\\><C-n>:q<CR>', { noremap = true })
 -- vim.keymap.set('n', '<C-k>', '<C-c><C-\\><C-n>:q<CR>', { noremap = true })
 
 vim.keymap.set('n', ';', require('fzf-lua').files, { noremap = true })
@@ -35,6 +34,13 @@ vim.keymap.set('n', '<F6>', ':LazyGit<CR>', { noremap = true })
 
 
 require('fzf-lua').register_ui_select()
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function()
+    -- post save hook
+    require("lint").try_lint()
+  end,
+})
+
 vim.diagnostic.config({ virtual_text = true })
 
 require("focus")
