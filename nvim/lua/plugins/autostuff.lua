@@ -23,7 +23,7 @@ return {{
 	  streaming = { -- useful for progress bars (requires `snacks.nvim`)
         name = { "download" },
         comment = { "streaming", "curl" }, -- comment contains "streaming" or "curl"
-	  },
+      },
       terminal = { -- useful for recipes with input
         name = { "." },
         comment = {},
@@ -40,4 +40,16 @@ return {{
   }
 }, {
   "norcalli/nvim-colorizer.lua"
+}, {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {
+      indent = {
+        highlight = {
+          "FoldColumn"
+        }
+      }
+    },
 }}
