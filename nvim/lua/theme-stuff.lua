@@ -1,4 +1,4 @@
-vim.g.alabaster_dim_comments = true
+-- vim.g.alabaster_dim_comments = true
 vim.cmd.colorscheme("alabaster")
 --vim.cmd('highlight Visual guifg=#605b5b guibg=#fafafa')
 --vim.cmd('highlight NvimTreeFolderName guifg=#c98082 gui=bold') 
