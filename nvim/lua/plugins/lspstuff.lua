@@ -3,13 +3,14 @@ return {{
   opts = {}
 },{
   "neovim/nvim-lspconfig",
+  event = { "BufReadPre", "BufNewFile" },
 },{
-    "mason-org/mason-lspconfig.nvim",
-    opts = {},
-    dependencies = {
-      "mason-org/mason.nvim",
-      "neovim/nvim-lspconfig",
-    }
+  "mason-org/mason-lspconfig.nvim",
+  opts = {},
+  dependencies = {
+    "mason-org/mason.nvim",
+    "neovim/nvim-lspconfig",
+  }
 },{
   "stevearc/conform.nvim",
   opts = {
@@ -35,7 +36,6 @@ return {{
       gdscript = { "gdlint" }
     }
   end
-  
 },{
   "rshkarin/mason-nvim-lint",
   opts = {

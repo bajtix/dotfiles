@@ -20,6 +20,7 @@ vim.keymap.set('n', '<C-k>j', vim.lsp.buf.definition,    { noremap = true })
 vim.keymap.set('n', '<C-k>l', vim.lsp.buf.declaration,   { noremap = true })
 vim.keymap.set('n', '<C-k>h', vim.lsp.buf.code_action,   { noremap = true })
 vim.keymap.set('n', '<C-k>f', require('conform').format, { noremap = true })
+vim.keymap.set('n', '<C-k>s', vim.lsp.buf.rename, { noremap = true })
 
 vim.keymap.set('t', '<C-j>', '<C-\\><C-n>', { noremap = true })
 -- vim.keymap.set('t', '<C-j>q', '<C-c><C-\\><C-n>:q<CR>', { noremap = true })

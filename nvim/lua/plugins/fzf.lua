@@ -9,4 +9,15 @@ return {{
   ---@diagnostic disable: missing-fields
   opts = {},
   ---@diagnostic enable: missing-fields
+},{
+  "drop-stones/fzf-lua-normal-mode",
+  opts = {
+    -- see configuration section
+    keys = {
+    -- repeatable keys
+      { key = "j", action = "<Down>" },
+      { key = "k", action = "<Up>" },
+      { key = "<Enter>", action = "<CR>", repeatable = false }
+    }
+  }
 }}
