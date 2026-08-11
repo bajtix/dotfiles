@@ -33,7 +33,8 @@ return {{
   "mfussenegger/nvim-lint",
   config = function()
     require('lint').linters_by_ft = {
-      gdscript = { "gdlint" }
+      gdscript = { "gdlint" },
+      csharp = { "clang-format" }
     }
   end
 },{

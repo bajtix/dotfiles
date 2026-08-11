@@ -11,4 +11,9 @@ return {{
 
         vim.lsp.enable('zenc')
     end,
+}, {
+    dir = "~/.config/nvim/external/avalonia.nvim",
+    opts = {
+        cmd = { "/home/bajtix/random-gits/ls-for-avalonia/bin/lsp/AvaloniaLanguageServer" }
+    }
 }}
